@@ -18,9 +18,9 @@
   
   resultsContainer.innerHTML = "";
 for (let i = 0; i < gamesData.length; i++) {
-    console.log(gamesData[i].name);
-     console.log(gamesData[i].rating)
-      console.log(gamesData[i].tags[i])
+     console.log(gamesData[i].name);
+     console.log(gamesData[i].rating);
+     console.log(gamesData[i].tags[i]);
 
     if (i === 8) {
       break;
@@ -28,7 +28,13 @@ for (let i = 0; i < gamesData.length; i++) {
 
     resultsContainer.innerHTML += `<div class="result">${gamesData[i].name}</div>`;
     resultsContainer.innerHTML += `<div class="result">${gamesData[i].rating}</div>`;
-     resultsContainer.innerHTML += `<div class="result">${gamesData[i].tags}</div>`;
+    resultsContainer.innerHTML += `<div class="result">${gamesData[i].tags[i]}</div>`;
+  
+  /*  or 
+   name.innerHTML += `<div class="result">${gamesData[i].name}</div>`;
+   rating.innerHTML += `<div class="result">${gamesData[i].rating}</div>`;
+   tags.innerHTML += `<div class="result">${gamesData[i].tags[i]}</div>`;
+  */
   }  
   catch (error) {
         console.log("An error occurred");
